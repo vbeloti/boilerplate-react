@@ -1,14 +1,9 @@
 import Routes from './routes';
-import AppProvider from './contexts';
 
 import './styles/global.css';
 
 function App() {
-  return (
-    <AppProvider>
-      <Routes />
-    </AppProvider>
-  );
+  return <Routes />;
 }
 
 export default App;
