@@ -1,13 +1,22 @@
+import { useState } from 'react';
 import * as S from './styled';
 
 import NotFoundIMG from '../../assets/images/NotFound/not-found.png';
 
 const NotFound = () => {
+  const [counter, setConter] = useState(0);
+
+  function increment() {
+    setConter(counter + 1);
+  }
+
   return (
     <S.NotFound>
       <S.NotFoundContainer>
         <S.NotFoundLeft>
-          <S.NotFoundTitle>Ih, essa página não foi encontrada</S.NotFoundTitle>
+          <S.NotFoundTitle onClick={increment}>
+            Ih, essa página não foi encontrada {counter}
+          </S.NotFoundTitle>
           <S.NotFoundDescription>
             Talvez o endereço digitado esteja incorreto ou você tenha clicado em uma página que não
             existe.

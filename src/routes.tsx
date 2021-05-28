@@ -4,7 +4,7 @@ import { NotFound } from './pages';
 
 const Routes = () => (
   <Switch>
-    <Route path="/" exact component={() => <h1>Inicial Page</h1>} />
+    <Redirect exact from="/" to="/ops" />
     <Route path="/healthcheck" component={() => <h1>ok</h1>} />
     <Route path="/ops" component={NotFound} />
     <Route path="*">
